@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medical Report Interpreter</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="container">
+      <h1>Medical Record Interpreter</h1>
+
+      <div class="upload-section">
+          <form id="upload-form" enctype="multipart/form-data">
+              <div class="file-input">
+                  <input type="file" id="report-file" name="file" accept=".jpg,.jpeg,.png">
+                  <label for="report-file">Choose image</label>
+              </div>
+              <button type="submit" id="upload-button">Upload and analyze</button>
+          </form>
+          <div id="loading" class="hidden">Processing...</div>
+      </div>
+
+      <div class="results-container hidden" id="results">
+          <div class="result-section">
+              <h2>Original Report Content</h2>
+              <div id="original-content" class="content-box"></div>
+          </div>
+
+          <div class="result-section explanation-section">
+              <h2>Simplified Explanation</h2>
+              <div class="language-tabs">
+                  <button class="language-tab active" data-language="original">Original</button>
+                  <button class="language-tab" data-language="chinese">中文</button>
+                  <button class="language-tab" data-language="spanish">Español</button>
+              </div>
+              <div id="explanation-content" class="content-box active-content"></div>
+              <div id="translated-content-chinese" class="content-box"></div>
+              <div id="translated-content-spanish" class="content-box"></div>
+              <div id="translation-loading" class="hidden">Translating...</div>
+          </div>
+        
+          <!-- Q&A Section -->
+          <div class="result-section qa-section">
+              <h2>Ask about your report</h2>
+              <div class="rag-toggle">
+                  <label class="toggle-switch">
+                      <input type="checkbox" id="rag-enabled" checked>
+                      <span class="toggle-slider"></span>
+                  </label>
+                  <span>Enhance answers with medical knowledge base</span>
+              </div>
+              <div class="qa-input">
+                  <input type="text" id="question-input" placeholder="Enter your question about the report...">
+                  <button id="ask-button">Ask</button>
+              </div>
+              <div id="qa-loading" class="hidden">Getting answer...</div>
+              <div id="qa-history" class="qa-history">
+                  <!-- Q&A pairs will be inserted here dynamically -->
+              </div>
+              <div class="references-section hidden">
+                  <h3>Medical References</h3>
+                  <div id="references-content" class="references-content"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

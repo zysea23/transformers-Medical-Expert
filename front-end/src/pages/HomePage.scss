@@ -1,0 +1,208 @@
+.home-page {
+  font-family: "Arial", sans-serif;
+  color: #333;
+  .main {
+    .hero {
+      display: flex;
+      text-align: center;
+      padding: 4rem 1rem;
+      background-color: #f5f5f5;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      h2 {
+        margin-bottom: 1rem;
+        flex-shrink: 0;
+        color: #111827;
+        text-align: center;
+        font-size: 3rem;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 3rem;
+        letter-spacing: -0.106rem;
+      }
+      p {
+        margin-bottom: 2rem;
+        max-width: 44rem;
+        color: #6b7280;
+        text-align: center;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.25rem;
+      }
+
+      .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        .try-now,
+        .watch-demo {
+          padding: 0.75rem 1.5rem;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+
+        .try-now {
+          background-color: #3498db;
+          color: #fff;
+          display: flex;
+          height: 3.75rem;
+          padding: 1.188rem 2.022rem 1.25rem 2rem;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 624.938rem;
+          border: 0px solid #e5e7eb;
+          font-size: 1.125rem;
+
+          &:hover {
+            background-color: #2980b9;
+          }
+        }
+
+        .watch-demo {
+          background-color: #e0e0e0;
+          color: #333;
+          height: 3.75rem;
+          padding: 1.188rem 2.022rem 1.25rem 2rem;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 624.938rem;
+          font-size: 1.125rem;
+
+          &:hover {
+            background-color: #d0d0d0;
+          }
+        }
+      }
+    }
+
+    .upload-section {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background-color: #fff;
+      transition: box-shadow 0.3s ease;
+      .upload-box {
+        display: flex;
+        width: 48rem;
+        height: 22.625rem;
+        align-items: center;
+        flex-direction: column;
+        flex-shrink: 0;
+        border-radius: 8px;
+        border: 0px solid #e5e7eb;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+        background: #f9fafb;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        align-items: center;
+        .upload-icon {
+          width: 2.8rem;
+          margin-bottom: 1rem;
+        }
+      }
+      h3 {
+        color: #000;
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.5rem;
+        margin-top: 23px;
+      }
+
+      p {
+        width: 24.875rem;
+        color: #6b7280;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1rem;
+      }
+
+      .file-input {
+        display: none;
+      }
+
+      .file-label {
+        display: inline-block;
+        background-color: #3498db;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 624.938rem;
+        padding: 0.875rem 1.554rem 0.875rem 1.5rem;
+
+        &:hover {
+          background-color: #2980b9;
+        }
+      }
+
+      .file-name {
+        margin-top: 1rem;
+        font-size: 1rem;
+      }
+
+      .upload-button {
+        display: inline-block;
+        margin-top: 1rem;
+        padding: 0.75rem 1.5rem;
+        background-color: #2ecc71;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 624.938rem;
+        padding: 0.875rem 1.554rem 0.875rem 1.5rem;
+        &:hover {
+          background-color: #27ae60;
+        }
+      }
+
+      .loading {
+        margin-top: 1rem;
+      }
+    }
+
+    .features {
+      text-align: center;
+      padding: 2rem 1rem;
+
+      h3 {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .feature-list {
+        display: flex;
+        justify-content: space-around;
+
+        .feature-item {
+          max-width: 300px;
+          text-align: center;
+
+          .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+          }
+
+          h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+          }
+
+          p {
+            font-size: 1rem;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}

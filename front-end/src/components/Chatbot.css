@@ -1,0 +1,157 @@
+.chatbot-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 16px;
+  height: 800px;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.message-content details {
+  margin: 10px 0;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.message-content details summary {
+  cursor: pointer;
+  padding: 8px;
+  font-weight: 500;
+}
+
+.message-content details summary:hover {
+  background-color: #f0f0f0;
+}
+
+.message-content details[open] {
+  padding-bottom: 10px;
+}
+
+.message-content details p {
+  padding: 8px;
+  margin: 0;
+}
+
+.chatbot-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  height: 40px;
+}
+.form-check.form-switch {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.form-check-input {
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-check-label {
+  font-size: 0.875rem;
+  color: #6c757d;
+  cursor: pointer;
+}
+
+.header-text {
+  font-size: 1.25rem;
+  margin: 0;
+}
+.header-controls {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.chatbot-window {
+  border-radius: 6px;
+  padding: 10px;
+  flex: 1;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  margin-bottom: 12px;
+  scroll-behavior: smooth;
+}
+.message {
+  display: flex;
+  /* align-items: center; */
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.message.bot {
+  justify-content: flex-start;
+}
+.message.user {
+  justify-content: flex-end;
+}
+.message-content {
+  background-color: #e9ecef;
+  padding: 8px 12px;
+  border-radius: 6px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+.message-content.bot {
+  background-color: white;
+}
+
+.chatbot-input {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 40px;
+}
+
+.chatbot-input .form-control {
+  flex: 1;
+}
+.chatbot-input .btn {
+  white-space: nowrap;
+}
+
+.loading-indicator {
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  min-height: 40px;
+}
+
+.typing-indicator {
+  display: flex;
+  align-items: center;
+}
+
+.typing-indicator span {
+  height: 8px;
+  width: 8px;
+  margin: 0 2px;
+  background-color: #3498db;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.4;
+}
+
+.typing-indicator span:nth-of-type(1) {
+  animation: 1s blink infinite 0.3333s;
+}
+.typing-indicator span:nth-of-type(2) {
+  animation: 1s blink infinite 0.6666s;
+}
+.typing-indicator span:nth-of-type(3) {
+  animation: 1s blink infinite 0.9999s;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
