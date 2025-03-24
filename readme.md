@@ -1,7 +1,7 @@
 # Medical Expert - AI-Powered Medical Report Interpreter
 
 ## Developers & Contact
-- Yu (Joey) Zhang – zhang.yu2@northeastern.edu
+- Yu (Joey) Zhang – zhang.yu22@northeastern.edu
 - Peiyu Lin - lin.peiyu@northeastern.edu
 - Fangyuan Zhang - zhang.fangyuan@northeastern.edu
 - Dong Lu - lu.dong1@northeastern.edu
@@ -66,31 +66,54 @@
 
 ```
 medical-expert/
-│
 ├── backend/
 │   ├── app/
-│   │   ├── main.py                  # FastAPI main application
-│   │   ├── models/lm_handler.py     # Handles LMStudio API interactions
-│   │   └── services/report_service.py  # Medical report processing service
-│   │
-│   ├── static/                      # Backend static assets
-│   ├── templates/                   # HTML templates
-│   ├── uploads/                     # Uploaded file storage
-│   │
-│   ├── .env                         # Environment variables
-│   └── requirements.txt             # Backend dependencies
+│   │   ├── main.py          # FastAPI application entry point
+│   │   ├── models/          # Data models and AI handlers
+│   │   │   ├── lm_handler.py    # LMStudio API interactions
+│   │   │   ├── medrag/          # Medical RAG implementation
+│   │   │   └── medical_metrics.json  # Reference health ranges
+│   │   ├── services/        # Business logic services
+│   │   │   ├── report_service.py  # Report processing service
+│   │   │   ├── file_service.py    # File handling operations
+│   │   │   └── rag_service.py     # RAG enhancement service
+│   │   └── utils/           # Helper utilities
+│   ├── static/              # Static assets for web interface
+│   │   ├── css/             # Stylesheet files
+│   │   └── js/              # JavaScript files
+│   ├── templates/           # HTML templates
+│   ├── uploads/             # Storage for uploaded files
+│   ├── corpus/              # Medical knowledge corpus for RAG
+│   ├── scripts/             # Utility scripts
+│   ├── Dockerfile           # Container definition
+│   ├── requirements.txt     # Python dependencies
+│   └── README.md            # Backend documentation
 │
 ├── frontend/
+│   ├── public/              # Public static assets
 │   ├── src/
-│   │   ├── components/              # React components
-│   │   ├── pages/                   # Application pages
-│   │   └── services/                # API service integrations
-│   │
-│   ├── public/                      # Public assets
-│   ├── package.json                 # Frontend dependencies
-│   └── vite.config.js               # Vite configuration
+│   │   ├── api/             # API client and service calls
+│   │   ├── assets/          # Static assets (images, icons)
+│   │   ├── components/      # Reusable UI components
+│   │   │   ├── Card.jsx     # Generic card component
+│   │   │   ├── Chatbot.jsx  # Interactive medical assistant
+│   │   │   ├── Layout.jsx   # Main layout structure
+│   │   │   └── MetricsCard.jsx  # Health metrics visualization
+│   │   ├── pages/           # Page components
+│   │   │   ├── HomePage.jsx # Landing page with file upload
+│   │   │   └── ResultPage.jsx  # Analysis display page
+│   │   ├── routes/          # Routing configuration
+│   │   ├── styles/          # Global styles and theme definitions
+│   │   ├── utils/           # Helper functions and utilities
+│   │   ├── App.jsx          # Main application component
+│   │   └── main.jsx         # Entry point
+│   ├── package.json         # Frontend dependencies
+│   ├── vite.config.js       # Build configuration
+│   ├── index.html           # HTML template
+│   └── README.md            # Frontend documentation
 │
-└── README.md                        # Project documentation
+└── README.md                # Project overview and setup guide
+
 ```
 
 ## Setup Instructions
@@ -121,7 +144,7 @@ medical-expert/
 
 2. **Install dependencies**:
    ```bash
-   cd backend
+   cd back-end
    pip install -r requirements.txt
    ```
 
@@ -131,11 +154,36 @@ medical-expert/
    ```
    The backend API will be available at `http://localhost:8000`
 
+#### Option 2: Using Docker (Recommended for Deployment or Isolation)
+
+1. Make sure you are in the project root directory (where the `Dockerfile` is located).
+
+2. Build the Docker image:
+
+   ```bash
+   docker build -t medical-report-interpreter .
+   ```
+
+3. Run the Docker container:
+
+   ```bash
+   docker run -p 8000:8000 --network="host" medical-report-interpreter
+   ```
+
+   > 💡 On macOS or non-Linux systems, you may omit the `--network="host"` option:
+
+   ```bash
+   docker run -p 8000:8000 medical-report-interpreter
+   ```
+
+4. Once running, the backend API will be available at [http://localhost:8000](http://localhost:8000).
+
+
 ### Frontend Setup
 
 1. **Install dependencies**:
    ```bash
-   cd frontend
+   cd front-end
    npm install
    ```
 
