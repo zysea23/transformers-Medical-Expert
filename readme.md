@@ -1,12 +1,5 @@
 # Medical Expert - AI-Powered Medical Report Interpreter
 
-## Developers & Contact
-- Yu (Joey) Zhang – zhang.yu22@northeastern.edu
-- Peiyu Lin - lin.peiyu@northeastern.edu
-- Fangyuan Zhang - zhang.fangyuan@northeastern.edu
-- Dong Lu - lu.dong1@northeastern.edu
-- Weizhou Zhou - zhou.weizh@northeastern.edu
-
 ## Overview
 
 **Medical Expert** is an innovative AI-driven application designed to help users understand complex medical reports. It leverages advanced machine learning technology to translate professional medical terminology into easy-to-understand explanations, enabling patients to better comprehend their health conditions. The system runs entirely **locally**, ensuring privacy and security of sensitive medical information.
