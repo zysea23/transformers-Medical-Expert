@@ -227,7 +227,7 @@ The backend provides the following API endpoints:
 ### 4. UI/UX Enhancements
 - Improve the frontend interface for a more intuitive user experience
 - Enhance visualization of medical data
-- Implement responsive design for mobile devices
+- Implement responsive design for mobile device
 
 ### 5. Testing & Validation
 - Conduct comprehensive testing with real medical report images
