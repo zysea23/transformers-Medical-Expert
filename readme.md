@@ -247,4 +247,4 @@ For questions or suggestions, please contact us through the project issues.
 
 ---
 
-**Medical Disclaimer**: The information provided by Medical Expert is for reference only and does not constitute medical advice. Important health decisions should always be made in consultation with qualified healthcare professional.
+**Medical Disclaimer**: The information provided by Medical Expert is for reference only and does not constitute medical advice. Important health decisions should always be made in consultation with qualified healthcare professionals.
